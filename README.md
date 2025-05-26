@@ -26,7 +26,7 @@ To run the notebook, make sure you have:
   - matplotlib  
   - seaborn  
   - scikit-learn  
-  - geopy (if geocoding is used)
+  - geopy
 
 Install dependencies with:
 
