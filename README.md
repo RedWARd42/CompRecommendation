@@ -1,44 +1,51 @@
-# Comp Recommendation System
+# Real Estate Analysis Notebook
 
-## Project Overview
+This repository contains a Jupyter Notebook (`analysis.ipynb`) used for analyzing real estate property and comparable sales data.
 
-This project aims to build a recommendation system for selecting the best comparable properties (comps) from a given dataset of appraisals. Each appraisal in the dataset contains information about the subject property, all available properties, and the comps that were ultimately selected. The system should be scalable to handle increasing amounts of data and will be benchmarked on a validation set. The primary focus is on back-end development and machine learning.
+## 📄 File Overview
 
-Before starting, you must take time to standardize and clean the data you're working with as there may be duplicates between the "comps" and "properties" as well as different names for certain datapoints.
+- `analysis.ipynb`: Main notebook for loading, processing, and visualizing real estate appraisal data.
 
-## Milestones
+## 🏗️ Project Description
 
-The project can be implemented in a variety of different approaches, here are some options with increasing levels of difficulty:
+The notebook performs exploratory data analysis (EDA) on a JSON-based dataset of real estate properties and their comparable sales. Key steps include:
 
-### 1. Statistical Modeling
+- Parsing and flattening nested JSON data
+- Geocoding property addresses
+- Visualizing locations and features
+- Preparing the data for modeling and clustering
 
-Develop a system for scoring properties based on their quality as a comp. This will involve using statistical modeling techniques, which may include:
+## 📦 Requirements
 
-- Clustering algorithms
-- Nearest Neighbors (NN)
-- Other statistical methods and distribution analysis
+To run the notebook, make sure you have:
 
-### 2. Explainability
+- Python 3.8+
+- Jupyter Notebook or JupyterLab
+- The following Python packages:
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - geopy
 
-Integrate Large Language Models (LLMs) or explainable AI techniques into the recommendation process to provide explanations for why a particular property is a good or bad comparable in relation to others. Can try techniques like finetuning LLMs with RL
+Install dependencies with:
 
-### 3. Self-Improving System
+pip install -r requirements.txt
 
-Design the system to learn and improve from human feedback. It should be capable of:
+markdown
+Copy code
 
-- Incorporating new data points as they become available.
-- Utilizing feedback from appraisers on the actual comps selected.
-- Using this new information for model refinement and retraining.
+## 🚀 Getting Started
 
-## Focus
+1. Clone the repo:
 
-- **Back-end Development:** Building the core logic and infrastructure for the recommendation system.
-- **Machine Learning:** Implementing and training the models for scoring and explainability.
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 
-## Dataset
+2. Open `analysis.ipynb` in Jupyter Notebook or JupyterLab.
 
-The core dataset consists of appraisals, where each record includes:
+3. Run all cells to reproduce the analysis.
 
-- Subject property details.
-- A list of all potentially comparable properties.
-- The set of comparable properties that were selected by an appraiser.
+## 📖 License
+
+This project is licensed under the MIT License.
